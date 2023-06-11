@@ -140,11 +140,11 @@
                     <label for="email" class="email">Email :</label>
                     <input type="text" name="email" id="email" placeholder="Input Your Email : ">
                 </section>
-                <section id="password">
+                <section id="passwordhhh">
                     <label for="password">Password :</label>
                     <input type="password" name="password" id="password" placeholder="Input Password : ">
                 </section>
-                <section id="confirm">
+                <section id="confirm--">
                     <label for="confirm">Konfirmasi password :</label>
                     <input type="password" name="confirm" id="confirm" placeholder="Confirm Your Password">
                 </section>
@@ -160,8 +160,27 @@
 </body>
 <script>
     let button = document.querySelector('button')
-    button.addEventListener('click',()=>{
-        alert('Data diamankan bosqu')
+
+    //kondisi password
+  
+    button.addEventListener('click',a=>{
+        let email = document.getElementById('email').value;        
+        let pw = document.getElementById('password').value;
+        let confirm = document.getElementById('confirm').value
+        console.log(pw)
+        console.log(confirm)
+
+        if(email===""){
+            alert("masukkan data dengan lengkap")
+        }else if(pw.length<7){
+            alert("password harus 8 karakter")
+        }else if(confirm!==pw){
+            alert('password tidak sama')
+        }else{
+            alert('data diamankan')
+        }
+        
     })
+
 </script>
 </html>
